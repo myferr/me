@@ -18,7 +18,8 @@ pub fn blog() -> Html {
         use_effect_with((), move |_| {
             let posts = posts.clone();
             wasm_bindgen_futures::spawn_local(async move {
-                if let Ok(response) = Request::get("http://localhost:3000/posts").send().await
+                let api_url = option_env!("API_URL").unwrap_or("http://localhost:3000");
+                if let Ok(response) = Request::get(&format!("{}/posts", api_url)).send().await
                     && let Ok(fetched_posts) = response.json::<Vec<Post>>().await
                 {
                     posts.set(fetched_posts);

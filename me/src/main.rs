@@ -21,7 +21,9 @@ fn switch(route: Route) -> Html {
     match route {
         Route::Home => html! { <App /> },
         Route::Blog => html! { <Blog /> },
-        Route::Post { slug } => html! { <Post slug={slug} /> },
+        Route::Post { slug } => {
+            html! { <Post slug={slug} api={option_env!("API_URL").unwrap_or("http://localhost:3000").to_string()} /> }
+        }
     }
 }
 
