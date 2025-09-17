@@ -1,13 +1,26 @@
+use actix_cors::Cors;
 use actix_web::{App, HttpServer};
 
 mod routes;
+use crate::routes::blog::{get_post, get_posts};
 use crate::routes::hello_world::hello_world;
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     println!("Running at localhost:3000");
-    HttpServer::new(|| App::new().service(hello_world))
-        .bind(("127.0.0.1", 3000))?
-        .run()
-        .await
+    HttpServer::new(|| {
+        let cors = Cors::default()
+            .allow_any_origin()
+            .allow_any_method()
+            .allow_any_header();
+
+        App::new()
+            .wrap(cors)
+            .service(hello_world)
+            .service(get_post)
+            .service(get_posts)
+    })
+    .bind(("127.0.0.1", 3000))?
+    .run()
+    .await
 }
