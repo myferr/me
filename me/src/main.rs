@@ -1,5 +1,7 @@
+mod constants;
 mod routes;
 
+use constants::apiurl::api_url;
 use routes::app::App;
 use routes::blog::Blog;
 use routes::post::Post;
@@ -20,9 +22,9 @@ pub enum Route {
 fn switch(route: Route) -> Html {
     match route {
         Route::Home => html! { <App /> },
-        Route::Blog => html! { <Blog /> },
+        Route::Blog => html! { <Blog api={api_url()} /> },
         Route::Post { slug } => {
-            html! { <Post slug={slug} api={option_env!("API_URL").unwrap_or("http://localhost:3000").to_string()} /> }
+            html! { <Post slug={slug} api={api_url()} /> }
         }
     }
 }

@@ -10,15 +10,21 @@ struct Post {
     title: String,
 }
 
+#[derive(Properties, PartialEq)]
+pub struct BlogProps {
+    pub api: String,
+}
+
 #[function_component(Blog)]
-pub fn blog() -> Html {
+pub fn blog(props: &BlogProps) -> Html {
+    let api_url = props.api.clone();
     let posts = use_state(Vec::new);
     {
         let posts = posts.clone();
         use_effect_with((), move |_| {
             let posts = posts.clone();
             wasm_bindgen_futures::spawn_local(async move {
-                let api_url = option_env!("API_URL").unwrap_or("http://localhost:3000");
+                let api_url = api_url.clone();
                 if let Ok(response) = Request::get(&format!("{}/posts", api_url)).send().await
                     && let Ok(fetched_posts) = response.json::<Vec<Post>>().await
                 {
