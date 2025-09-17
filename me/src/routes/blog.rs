@@ -47,6 +47,7 @@ pub fn blog() -> Html {
             <ul class="mt-4">
                 { for posts.iter().map(|post| html! {
                     <li class="mb-2">
+                        <span>{"- "}</span>
                         <Link<Route> to={Route::Post { slug: post.slug.clone() }}>
                             <span class="text-[#e5e5e5] underline">{ &post.title }</span>
                         </Link<Route>>
