@@ -1,7 +1,5 @@
-use crate::Route;
 use gloo_net::http::Request;
 use yew::prelude::*;
-use yew_router::prelude::*;
 
 #[derive(Properties, PartialEq)]
 pub struct PostProps {
@@ -36,15 +34,25 @@ pub fn post(props: &PostProps) -> Html {
 
     let div = gloo_utils::document().create_element("div").unwrap();
     div.set_inner_html(&post_html);
-    div.set_attribute("class", "notailwind").unwrap();
+    div.set_attribute("class", "max-w-xl notailwind").unwrap();
 
     html! {
-        <main class="max-w-xl prose prose-invert">
-            { Html::VRef(div.into()) }
-            <br />
-            <Link<Route> to={Route::Blog}>
-                <span class="text-[#e5e5e5] underline">{"back to blog"}</span>
-            </Link<Route>>
-        </main>
+        <div class="flex min-h-screen bg-white text-black/70 dark:text-[#a1a1a1] dark:bg-[#0a0a0a]">
+            <aside class="hidden md:flex md:flex-col md:w-64 bg-gray-200 dark:bg-neutral-900 p-6">
+                <div class="flex items-center gap-2 mb-6">
+                    <img class="w-10 h-10" src="https://github.com/myferr.png" alt="github.com/myferr" />
+                    <a class="font-bold text-lg text-black dark:text-[#e5e5e5]" href="/">{"myfer"}</a>
+                </div>
+                <nav class="flex flex-col gap-4">
+                    <a href="https://github.com/myferr" target="_blank" class="text-black dark:text-[#e5e5e5] underline">{"github"}</a>
+                    <a href="https://x.com/myferdoescoding" target="_blank" class="text-black dark:text-[#e5e5e5] underline">{"x dot com"}</a>
+                    <a href="/blog" class="text-black dark:text-[#e5e5e5] underline">{"blog"}</a>
+                </nav>
+            </aside>
+
+            <main class="flex-1 p-6 max-w-3xl">
+                { Html::VRef(div.into()) }
+            </main>
+        </div>
     }
 }
