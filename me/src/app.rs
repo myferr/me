@@ -38,6 +38,7 @@ pub fn app() -> Html {
                 <a href="https://x.com/myferdoescoding" target="_blank" class="text-[#e5e5e5] underline">
                     {"x dot com"}
                 </a>
+
             </div>
         </main>
     }
