@@ -32,6 +32,7 @@ pub fn post(props: &PostProps) -> Html {
 
     let div = gloo_utils::document().create_element("div").unwrap();
     div.set_inner_html(&post_html);
+    div.set_attribute("class", "notailwind").unwrap();
 
     html! {
         <main class="max-w-xl prose prose-invert">

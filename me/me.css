@@ -1,3 +1,27 @@
 * {
     font-family: "Inter", serif;
 }
+
+.notailwind h1,
+.notailwind h2,
+.notailwind h3,
+.notailwind h4,
+.notailwind h5,
+.notailwind h6 {
+    font-size: revert;
+    font-weight: revert;
+    margin: revert;
+    color: #e5e5e5;
+}
+.notailwind p,
+.notailwind ul,
+.notailwind ol,
+.notailwind blockquote {
+    margin: revert;
+    padding: revert;
+}
+
+.notailwind a {
+    color: revert;
+    text-decoration: revert;
+}
