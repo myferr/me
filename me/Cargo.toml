@@ -1,7 +1,7 @@
 [package]
 name = "myferr-foo-ng"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 description = "Template for starting a Yew project using Trunk"
 readme = "README.md"
 repository = "https://github.com/myferr.foo.ng"
@@ -9,3 +9,6 @@ license = "MIT"
 
 [dependencies]
 yew = { version="0.21", features=["csr"] }
+
+[dev-dependencies]
+husky-rs = "0.1.5"
