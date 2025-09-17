@@ -22,6 +22,12 @@
 }
 
 .notailwind a {
-    color: revert;
+    color: #e5e5e5;
     text-decoration: revert;
+}
+
+.notailwind blockquote {
+    border-left: 4px solid #e5e5e5;
+    padding-left: 1rem;
+    font-style: italic;
 }
