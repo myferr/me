@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 echo "[ husky-rs * ] Running commitlint hook."
 cat .git/COMMIT_EDITMSG | commitlint --config ./.commitlintrc.yml
 
