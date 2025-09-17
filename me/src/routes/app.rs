@@ -34,11 +34,12 @@ pub fn app() -> Html {
                     {" and "}
                     <span class="dark:text-[#e5e5e5] text-[#0a0a0a] underline">{"clis"}</span>
                     {". "}
-                    <br/>
-                    <br/>
-                    <p>
-                    {"currently living in macos or arch linux."}
-                    </p>
+                </p>
+
+                <br/>
+
+                <p>
+                {"currently living in macos or arch linux."}
                 </p>
             </main>
         </div>
