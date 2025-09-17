@@ -1,2 +1,8 @@
 #!/bin/sh
-echo "Running pre-commit hook"
+
+echo "[ husky-rs * ] Running commitlint hook."
+cat .git/COMMIT_EDITMSG | commitlint --config ./.commitlintrc.yml
+
+echo "[ husky-rs * ] Running lint and format."
+cargo fmt -- --check
+cargo clippy -- -D warnings

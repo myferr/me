@@ -1,0 +1,7 @@
+rules:
+  description-empty:
+    level: error
+  subject-empty:
+    level: error
+  type-empty:
+    level: warning
