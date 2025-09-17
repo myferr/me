@@ -2,14 +2,11 @@ use actix_web::{get, web, HttpResponse, Responder};
 use pulldown_cmark::{html, Parser};
 use serde::Serialize;
 use std::fs;
-use std::path::{Path, PathBuf};
 use walkdir::WalkDir;
 
-fn get_content_dir() -> PathBuf {
-    if let Ok(path) = std::env::var("CARGO_MANIFEST_DIR") {
-        return Path::new(&path).join("../content");
-    }
-    PathBuf::from("../content")
+fn get_content_dir() -> std::path::PathBuf {
+    let cwd = std::env::current_dir().unwrap_or_else(|_| std::path::PathBuf::from("."));
+    cwd.join("../content")
 }
 
 #[derive(Serialize)]

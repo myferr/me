@@ -7,7 +7,7 @@ use crate::routes::hello_world::hello_world;
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
-    println!("Running at localhost:3000");
+    println!("Running at localhost:2025");
     HttpServer::new(|| {
         let cors = Cors::default()
             .allow_any_origin()
@@ -20,7 +20,7 @@ async fn main() -> std::io::Result<()> {
             .service(get_post)
             .service(get_posts)
     })
-    .bind(("127.0.0.1", 3000))?
+    .bind(("0.0.0.0", 2025))?
     .run()
     .await
 }

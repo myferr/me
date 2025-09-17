@@ -1,0 +1,14 @@
+
+# Ignore git files
+.git
+.gitignore
+
+# Ignore target directories
+**/target
+
+# Ignore node_modules
+**/node_modules
+
+# Ignore IDE files
+.idea
+.vscode
