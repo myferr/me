@@ -30,7 +30,20 @@ pub fn blog() -> Html {
 
     html! {
         <main class="max-w-xl">
-            <h1 class="text-2xl font-bold text-[#e5e5e5]">{"Blog"}</h1>
+            <h1 class="text-2xl font-bold text-[#e5e5e5]">{"blog"}</h1>
+
+            <p>
+                {"welcome to "}
+                <span class="text-[#e5e5e5] underline">{"my blog"}</span>
+                {" where i mostly talk about programming."}
+            </p>
+
+            <br/>
+
+            <h2 class="text-xl font-bold text-[#e5e5e5]">
+                {"posts"}
+            </h2>
+
             <ul class="mt-4">
                 { for posts.iter().map(|post| html! {
                     <li class="mb-2">
@@ -40,9 +53,12 @@ pub fn blog() -> Html {
                     </li>
                 })}
             </ul>
+            <p>
+                {"end of posts."}
+            </p>
             <br />
             <Link<Route> to={Route::Home}>
-                <span class="text-[#e5e5e5] underline">{"home"}</span>
+                <span class="text-[#e5e5e5] underline">{"go home"}</span>
             </Link<Route>>
         </main>
     }
