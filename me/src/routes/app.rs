@@ -41,6 +41,31 @@ pub fn app() -> Html {
                 <p>
                 {"currently living in macos or arch linux."}
                 </p>
+
+                <br/>
+
+                <p>
+                {" cool people → "}
+                </p>
+                <p>
+                {"here are some pretty "}
+                <span class="dark:text-[#e5e5e5] text-[#0a0a0a] underline">{"cool people"}</span>
+                {", go checkout their stuff"}
+                </p>
+                <div class="flex flex-wrap gap-1">
+                    <a href="https://github.com/notaussie" target="_blank">
+                        <img src="https://github.com/notaussie.png" alt="notaussie" width="32" height="32"/>
+                    </a>
+                    <a href="https://github.com/veddevv" target="_blank">
+                        <img src="https://github.com/veddevv.png" alt="veddevv" width="32" height="32"/>
+                    </a>
+                    <a href="https://goobin.club" target="_blank">
+                        <img src="https://github.com/qrunk.png" alt="qrunk" width="32" height="32"/>
+                    </a>
+                    <a href="https://git.swee.codes/swee" target="_blank">
+                        <img src="https://github.com/Sweeistaken.png" alt="sweeistaken" width="32" height="32"/>
+                    </a>
+                </div>
             </main>
         </div>
     }
