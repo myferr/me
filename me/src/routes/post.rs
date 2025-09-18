@@ -38,7 +38,7 @@ pub fn post(props: &PostProps) -> Html {
 
     html! {
         <div class="flex min-h-screen bg-white text-black/70 dark:text-[#a1a1a1] dark:bg-[#0a0a0a]">
-            <aside class="hidden md:flex md:flex-col md:w-64 bg-gray-200 dark:bg-neutral-900 p-6">
+            <aside class="hidden md:flex md:flex-col md:w-64 bg-gray-200 dark:bg-neutral-900 p-6 border-r border-gray-200 dark:border-neutral-700">
                 <div class="flex items-center gap-2 mb-6">
                     <img class="w-10 h-10" src="https://github.com/myferr.png" alt="github.com/myferr" />
                     <a class="font-bold text-lg text-black dark:text-[#e5e5e5]" href="/">{"myfer"}</a>
