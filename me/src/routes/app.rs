@@ -66,6 +66,11 @@ pub fn app() -> Html {
                         <img src="https://github.com/Sweeistaken.png" alt="sweeistaken" width="32" height="32"/>
                     </a>
                 </div>
+
+                <br/>
+                <br/>
+
+                <img src="https://ghchart.rshah.org/myferr" alt="myferr" class="bg-gray-50 dark:bg-gray-900 rounded-xl p-2"/>
             </main>
         </div>
     }
