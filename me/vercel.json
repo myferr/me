@@ -1,7 +1,11 @@
 {
   "buildCommand": "bash ./build.sh",
   "outputDirectory": "dist",
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+
+  "rewrites": [
+    {
+      "source": "/((?!.*\\.(?:js|css|json|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|map)).*)",
+      "destination": "/index.html"
+    }
+  ]
 }
