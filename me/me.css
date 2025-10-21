@@ -2,6 +2,15 @@
     font-family: "Inter", serif;
 }
 
+code {
+    font-family: monospace;
+    font-weight: bold;
+    color: #e5e5e5;
+    background-color: #222;
+    border-radius: 4px;
+    padding: 2px 4px;
+}
+
 .notailwind h1,
 .notailwind h2,
 .notailwind h3,
