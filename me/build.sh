@@ -8,7 +8,7 @@ source $HOME/.cargo/env
 rustup target add wasm32-unknown-unknown
 
 # Install Trunk and wasm-bindgen-cli
-cargo install trunk wasm-bindgen-cli
+cargo install --locked trunk wasm-bindgen-cli
 
 # Build your Yew app
 trunk build --release
