@@ -1,5 +1,5 @@
 {
-  "buildCommand": "bash ./build.sh",
+  "buildCommand": "HOME=/root bash ./build.sh",
   "outputDirectory": "dist",
 
   "rewrites": [
