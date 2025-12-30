@@ -1,6 +1,0 @@
-# important stuff to ignore
-.DS_Store
-.env
-
-# rust
-target/
