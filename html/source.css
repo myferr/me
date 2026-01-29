@@ -1,0 +1,85 @@
+:root {
+	--bgcolor: #1c1e20;
+	--fontcolor: #f7fafc;
+	--accent1: #ff99aa;
+	--accent2: #339988;
+	--accent3: #ffbb66;
+	--accent4: #5566cc;
+	--accent5: #dd4455;
+	--accent6: #bbccff;
+	--accent7: #99aabb;
+	--fontsize: 14px;
+	--mainfont: sans-serif;
+	--titlefont: serif;
+}
+
+u {
+	text-decoration-style: dotted;
+}
+
+body {
+	background: var(--bgcolor);
+	color: var(--fontcolor);
+	font-size: var(--fontsize);
+	font-family: var(--mainfont);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--accent1);
+	font-family: var(--titlefont);
+}
+
+a {
+	color: var(--accent2);
+	text-decoration: none;
+}
+
+a:hover,
+a:focus {
+	color: var(--accent3);
+	text-decoration: underline;
+}
+
+button {
+	background: var(--accent4);
+	color: var(--fontcolor);
+	border: none;
+	border-radius: 4px;
+	font-family: var(--mainfont);
+	padding: 0.5em 1em;
+	cursor: pointer;
+}
+
+button:hover {
+	background: var(--accent5);
+}
+
+input,
+textarea,
+select {
+	background: var(--accent6);
+	color: var(--bgcolor);
+	font-size: var(--fontsize);
+	font-family: var(--mainfont);
+	border: 1px solid var(--accent7);
+	border-radius: 2px;
+	padding: 0.3em 0.6em;
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid var(--accent7);
+}
+
+code,
+pre {
+	background: var(--accent7);
+	color: var(--bgcolor);
+	font-family: monospace;
+	font-size: calc(var(--fontsize) * 0.95);
+}
