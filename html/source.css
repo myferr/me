@@ -83,3 +83,94 @@ pre {
 	font-family: monospace;
 	font-size: calc(var(--fontsize) * 0.95);
 }
+
+#blog-fullscreen {
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 2em;
+}
+
+.back-button {
+	display: inline-block;
+	margin-bottom: 2em;
+	font-size: calc(var(--fontsize) * 1.2);
+}
+
+#blog-fullscreen h1 {
+	font-size: calc(var(--fontsize) * 2);
+}
+
+.blog-preview {
+	border: 1px solid var(--accent7);
+	padding: 1em;
+	margin: 1em 0;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: border-color 0.2s;
+}
+
+.blog-preview:hover {
+	border-color: var(--accent3);
+}
+
+.blog-preview h3 {
+	margin: 0 0 0.5em 0;
+	color: var(--accent2);
+}
+
+.blog-date {
+	color: var(--accent7);
+	font-size: calc(var(--fontsize) * 0.9);
+	margin: 0 0 0.5em 0;
+}
+
+.blog-desc {
+	margin: 0;
+}
+
+#blog-content {
+	margin-top: 1.5em;
+}
+
+.blog-markdown h1,
+.blog-markdown h2,
+.blog-markdown h3 {
+	margin-top: 1.5em;
+}
+
+.blog-markdown p {
+	line-height: 1.6;
+}
+
+.blog-markdown code {
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+}
+
+.blog-markdown pre {
+	padding: 1em;
+	overflow-x: auto;
+	border-radius: 4px;
+}
+
+.blog-markdown pre code {
+	padding: 0;
+	background: none;
+}
+
+.blog-markdown ul,
+.blog-markdown ol {
+	padding-left: 1.5em;
+}
+
+.blog-markdown blockquote {
+	border-left: 3px solid var(--accent4);
+	margin: 1em 0;
+	padding-left: 1em;
+	color: var(--accent7);
+}
+
+.blog-markdown img {
+	max-width: 100%;
+	height: auto;
+}
