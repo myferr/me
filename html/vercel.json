@@ -1,26 +1,6 @@
 {
 	"rewrites": [
 		{ "source": "/", "destination": "/index.html" },
-		{ "source": "/stamp", "destination": "/assets/stamp.png" },
-		{ "source": "/cat", "destination": "/assets/cat.jpg" },
-		{ "source": "/stamp-1", "destination": "/assets/stamp1.webp" },
-		{ "source": "/stamp-2", "destination": "/assets/stamp2.webp" },
-		{ "source": "/stamp-3", "destination": "/assets/stamp3.gif" },
-		{
-			"source": "/assets/Censor_Gc.gif",
-			"destination": "/assets/Censor_Gc.gif"
-		},
-		{
-			"source": "/posts.json",
-			"destination": "/posts.json"
-		},
-		{
-			"source": "/posts/:file",
-			"destination": "/posts/:file"
-		},
-		{
-			"source": "/lib/:file",
-			"destination": "/lib/:file"
-		}
+		{ "source": "/.well-known/discord", "destination": "discord.txt" }
 	]
 }

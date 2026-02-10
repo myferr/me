@@ -12,129 +12,15 @@
     <meta property="og:url" content="https://myferr.com/">
     <meta property="og:image" content="https://myferr.com/stamp">
     <link rel="stylesheet" href="./source.css" />
-    <script src="./lib/marked.min.js"></script>
   </head>
   <body style="padding: 8px;">
-    <h2>myferr</h2>
-    helo! :3<br/>
-    i'm myferr (<a href="https://ipa-reader.com/?text=%CB%88ma%C9%AA%CB%88f%C9%9D/">ˈmaɪˈfɝ/</a>), an online alias i go by for most of my accounts on the internet.<br/>
-    welcome to my majestic website!!<br/><br/>
-
-    <a href="https://myferr.com/">
-      <img src="/stamp" width="68" height="21" alt="myferr badge"/>
-    </a>
-    <span>&lt;---- thats my badge!</span>
-    <a href="http://www.mabsland.com">
-      <img src="/assets/Censor_Gc.gif" width="68" height="21" alt="Mab's Land badge"/>
-    </a>
-    <img src="/stamp-1" width="68" height="21" alt="extra badge 1"/>
-    <img src="/stamp-2" width="68" height="21" alt="extra badge 2"/>
-    <img src="/stamp-3" width="68" height="21" alt="extra badge 3"/>
-    <h2>wait.. who are you <img src="/cat" width="68" height="68" alt="cat"/></h2>
-    i am a florida-based 14 year old developer, i've been programming since <u>2019</u> and have been learning ever since.<br/>
-    right now i focus on building full-stack projects with a varying tech stack<br/><br/>
-    i hope to get into blogging soon :3 (if i do, i will be posting my writing here!)
-    <h2>contact me :3</h2>
-    i am on various texting platforms (and like most people i have an e-mail address)
-    <ul>
-      <li>
-        <a href="mailto:contactme.myfer@protonmail.com">mailto (contactme.myfer@protonmail.com)</a>
-      </li>
-      <li>
-        <a href="https://discord.com/users/1344758897277272286">discord (@9wtw)</a>
-      </li>
-      <li>
-        <a href="https://matrix.to/#/@myferr:matrix.org">matrix (@myferr:matrix.org)</a>
-      </li>
-    </ul>
+    <h2><span style="color: #313244;"> > </span>myferr</h2>
+    <p>I am Myfer, a 14 year old Florida-based full stack developer biased towards backend work. Born in late 2011, programming since late 2019.</p>
+    <p>I enjoy writing functional tooling (such as CLIs, frameworks, and re-usable libraries for Python and JavaScript) and web-based work.</p>
+    <p>Currently building <a href="https://github.com/use-solace">Solace</a> & working with friends over at <a href="https://github.com/catto-oss">catto labs</a> building cool software.</p>
     <br/>
-    might host my own irc server soon?
-    <h2>sum more links!!</h2>
-    <ul>
-      <li>
-        <a href="https://github.com/myferr">github</a>
-      </li>
-      <li>
-        <a href="https://ko-fi.com/myfer">ko-fi</a>
-      </li>
-      <li>
-        <a href="https://stats.fm/myfer">stats.fm</a>
-      </li>
-    </ul>
-    <div id="blog-section">
-      <h2>writings :3</h2>
-      <ul id="blog-list"></ul>
+    <div style="display: flex; gap: 14px;">
+      <a href="mailto:contactme.myfer@protonmail.com">e-mail</a>
     </div>
-    <div id="blog-fullscreen" style="display:none">
-      <a href="#" onclick="goHome();return false" class="back-button">&larr; back home</a>
-      <div id="blog-content"></div>
-    </div>
-    <script>
-      let posts = [];
-      let originalContent = null;
-
-      async function loadPosts() {
-        try {
-          const res = await fetch('/posts.json');
-          posts = await res.json();
-          renderBlogList();
-        } catch (e) {
-          console.error('Failed to load posts:', e);
-        }
-      }
-
-      function renderBlogList() {
-        const list = document.getElementById('blog-list');
-        list.innerHTML = posts.map(post => `
-            <li><a href="#" onclick="showPost('${post.slug}'); return false;">${post.date} — ${post.title}</a></li>
-        `).join('');
-      }
-
-      function showPost(slug) {
-        const post = posts.find(p => p.slug === slug);
-        if (!post) return;
-
-        originalContent = document.body.innerHTML;
-        document.body.innerHTML = `
-          <div id="blog-fullscreen" style="display:block">
-            <a href="#" onclick="goHome();return false" class="back-button">&larr; back home</a>
-            <div id="blog-content">
-              <h1>${post.title}</h1>
-              <p class="blog-date">${post.date}</p>
-              <div class="blog-markdown">${marked.parse(post.content)}</div>
-            </div>
-          </div>
-        `;
-        window.scrollTo(0, 0);
-      }
-
-      function goHome() {
-        if (originalContent) {
-          document.body.innerHTML = originalContent;
-          originalContent = null;
-          loadPosts();
-        }
-      }
-
-      loadPosts();
-    </script>
-    <br/>
-    <hr>
-    before you go!
-    <a href="https://github.com/myferr/me">this site is open source</a>
-    <h3>some awesome people &lt;3</h3>
-    <a href="https://github.com/NotAussie">
-      <img src="https://github.com/NotAussie.png" width="46" height="46" alt="NotAussie GitHub avatar"/>
-    </a>
-    <a href="https://github.com/notrtdsx">
-      <img src="https://github.com/notrtdsx.png" width="46" height="46" alt="notrtdsx GitHub avatar"/>
-    </a>
-    <a href="https://dmx3377.uk/">
-      <img src="https://github.com/dmx3377.png" width="46" height="46" alt="dmx3377 GitHub avatar"/>
-    </a>
-    <br/><br/><br/>
-    link my badge with <code>https://myferr.com/stamp</code>,
-    oki byebye now
-    <img src="https://camo.githubusercontent.com/16d42777a4c2efc338a84f003622b365f1bdde30c2672ca248cb24ed71ac53e9/68747470733a2f2f6d656469612e74656e6f722e636f6d2f75463757516e4671476e7341414141692f6365636573726861636363312d6f6e2d74696b746f6b2d6365636573726861636363312e676966" width="30" height="26" alt="dancing badge gif"/>
   </body>
 </html>

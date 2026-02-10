@@ -1,16 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 :root {
-	--bgcolor: #1c1e20;
-	--fontcolor: #f7fafc;
-	--accent1: #ff99aa;
-	--accent2: #339988;
-	--accent3: #ffbb66;
-	--accent4: #5566cc;
-	--accent5: #dd4455;
-	--accent6: #bbccff;
-	--accent7: #99aabb;
-	--fontsize: 14px;
-	--mainfont: sans-serif;
-	--titlefont: serif;
+	--bgcolor: #1e1e2e;          /* Base */
+	--fontcolor: #cdd6f4;        /* Text */
+	--accent1: #cba6f7;          /* Mauve (headers) */
+	--accent2: #f5c2e7;          /* Pink (links) */
+	--accent3: #f38ba8;          /* Red (hover/focus) */
+	--accent4: #b4befe;          /* Lavender (buttons/blockquote) */
+	--accent5: #eba0ac;          /* Maroon (button hover) */
+	--accent6: #313244;          /* Surface 0 (inputs) */
+	--accent7: #45475a;          /* Surface 1 (borders/dividers) */
+	--accent8: #f5e0dc;          /* Rosewater (code inline bg) */
+	--fontsize: 16px;
+	--mainfont: 'Inter', 'Segoe UI', Arial, sans-serif;
+	--titlefont: 'JetBrains Mono', 'Fira Mono', 'Monaco', monospace;
 }
 
 u {
@@ -37,6 +40,7 @@ h6 {
 a {
 	color: var(--accent2);
 	text-decoration: none;
+	transition: color 0.14s;
 }
 
 a:hover,
@@ -47,27 +51,30 @@ a:focus {
 
 button {
 	background: var(--accent4);
-	color: var(--fontcolor);
+	color: var(--bgcolor);
 	border: none;
 	border-radius: 4px;
 	font-family: var(--mainfont);
 	padding: 0.5em 1em;
 	cursor: pointer;
+	font-weight: 600;
+	transition: background 0.14s;
 }
 
 button:hover {
 	background: var(--accent5);
+	color: var(--bgcolor);
 }
 
 input,
 textarea,
 select {
 	background: var(--accent6);
-	color: var(--bgcolor);
+	color: var(--fontcolor);
 	font-size: var(--fontsize);
 	font-family: var(--mainfont);
 	border: 1px solid var(--accent7);
-	border-radius: 2px;
+	border-radius: 2.5px;
 	padding: 0.3em 0.6em;
 }
 
@@ -78,9 +85,9 @@ hr {
 
 code,
 pre {
-	background: var(--accent7);
+	background: var(--accent8);
 	color: var(--bgcolor);
-	font-family: monospace;
+	font-family: 'JetBrains Mono', 'Fira Mono', 'Monaco', monospace;
 	font-size: calc(var(--fontsize) * 0.95);
 }
 
@@ -88,34 +95,41 @@ pre {
 	max-width: 700px;
 	margin: 0 auto;
 	padding: 2em;
+	background: var(--accent6);
+	border-radius: 8px;
 }
 
 .back-button {
 	display: inline-block;
 	margin-bottom: 2em;
 	font-size: calc(var(--fontsize) * 1.2);
+	color: var(--accent2);
 }
 
 #blog-fullscreen h1 {
 	font-size: calc(var(--fontsize) * 2);
+	color: var(--accent1);
 }
 
 .blog-preview {
 	border: 1px solid var(--accent7);
 	padding: 1em;
 	margin: 1em 0;
-	border-radius: 4px;
+	border-radius: 6px;
 	cursor: pointer;
-	transition: border-color 0.2s;
+	transition: border-color 0.2s, box-shadow 0.2s;
+	background: var(--accent6);
 }
 
 .blog-preview:hover {
 	border-color: var(--accent3);
+	box-shadow: 0 2px 10px 0 rgba(203,166,247,0.13);
 }
 
 .blog-preview h3 {
 	margin: 0 0 0.5em 0;
 	color: var(--accent2);
+	font-family: var(--titlefont);
 }
 
 .blog-date {
@@ -136,26 +150,33 @@ pre {
 .blog-markdown h2,
 .blog-markdown h3 {
 	margin-top: 1.5em;
+	font-family: var(--titlefont);
+	color: var(--accent1);
 }
 
 .blog-markdown p {
-	line-height: 1.6;
+	line-height: 1.7;
 }
 
 .blog-markdown code {
-	padding: 0.2em 0.4em;
-	border-radius: 3px;
+	background: var(--accent8);
+	color: var(--bgcolor);
+	padding: 0.2em 0.44em;
+	border-radius: 4px;
 }
 
 .blog-markdown pre {
+	background: var(--accent7);
+	color: var(--fontcolor);
 	padding: 1em;
 	overflow-x: auto;
-	border-radius: 4px;
+	border-radius: 6px;
 }
 
 .blog-markdown pre code {
 	padding: 0;
 	background: none;
+	color: inherit;
 }
 
 .blog-markdown ul,
@@ -168,9 +189,12 @@ pre {
 	margin: 1em 0;
 	padding-left: 1em;
 	color: var(--accent7);
+	background: var(--accent6);
 }
 
 .blog-markdown img {
 	max-width: 100%;
 	height: auto;
+	border-radius: 4px;
+	box-shadow: 0 0 0.5em 0 rgba(148, 226, 213, 0.09);
 }
