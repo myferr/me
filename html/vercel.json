@@ -1,6 +1,0 @@
-{
-	"rewrites": [
-		{ "source": "/", "destination": "/index.html" },
-		{ "source": "/.well-known/discord", "destination": "discord.txt" }
-	]
-}
