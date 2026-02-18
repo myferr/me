@@ -7,7 +7,7 @@
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 
-<div class="bg-[#202120] text-white min-h-screen justify-center items-center flex flex-col">
+<div class="bg-[#0f0f14] text-white min-h-screen justify-center items-center flex flex-col">
 	<div>
 		{@render children()}
 	</div>
@@ -16,6 +16,12 @@
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 	* {
-		font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	}
+	img {
+    	image-rendering: auto;
+    	image-rendering: crisp-edges;
+    	image-rendering: pixelated;
+    	image-rendering: -webkit-optimize-contrast;
 	}
 </style>
